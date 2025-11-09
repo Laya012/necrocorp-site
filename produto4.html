@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vamp CRM — NecroCorp</title>
+  <meta name="description" content="Vamp CRM – CRM empresarial avançado e automação de vendas.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .vamp-hero {
+        text-align: center;
+        padding: 50px 30px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        border-radius: 15px;
+        margin-bottom: 40px;
+        border: 2px solid #333;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .vamp-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #d4af37, #8b0000, #d4af37);
+    }
+    
+    .vamp-price {
+        background: #d4af37;
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        display: inline-block;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    }
+    
+    .vamp-sales {
+        background: #252525;
+        padding: 30px;
+        border-radius: 10px;
+        border-left: 4px solid #8b0000;
+        margin: 30px 0;
+    }
+    
+    .crm-badge {
+        display: inline-block;
+        background: #8b0000;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 5px;
+    }
+    
+    .funnel-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        gap: 10px;
+    }
+    
+    .funnel-stage {
+        background: #252525;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        border: 2px solid #333;
+        min-width: 120px;
+    }
+  </style>
+</head>
+<body class="produto4-body">
+  <!-- CSS INLINE no header -->
+  <header style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); color: #ffffff; padding: 2rem 1rem; border-bottom: 4px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    <h1 style="margin: 0 0 1rem 0; font-size: 2.8rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">Vamp CRM</h1>
+    
+    <nav style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Início</a>
+      <a href="produtos.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Produtos</a>
+      <a href="sobre.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Sobre</a>
+      <a href="cadastro.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="produto4-main">
+    <!-- Hero Section -->
+    <section class="vamp-hero" style="text-align: center; padding: 50px 30px; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 15px; margin-bottom: 40px; border: 2px solid #333; position: relative;">
+      <h2 class="produto4-h1" style="color: #d4af37; text-align: center; margin-bottom: 20px; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">CRM Empresarial Avançado</h2>
+      
+      <div class="vamp-price" style="background: #d4af37; color: #000; padding: 10px 20px; border-radius: 25px; font-size: 1.3rem; font-weight: bold; display: inline-block; margin: 20px 0; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);">
+        R$ 3.750,00/mês
+      </div>
+      
+      <p class="produto4-description" style="color: #e0e0e0; line-height: 1.8; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+        Solução completa de gestão de relacionamento com clientes, automação do funil de vendas e integração com canais digitais para maximizar conversões.
+      </p>
+      
+      <div style="margin-top: 25px;">
+        <span class="crm-badge" style="display: inline-block; background: #8b0000; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">📊 Funil de Vendas</span>
+        <span class="crm-badge" style="display: inline-block; background: #8b0000; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">🤖 Automação</span>
+        <span class="crm-badge" style="display: inline-block; background: #8b0000; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">📧 Marketing</span>
+        <span class="crm-badge" style="display: inline-block; background: #8b0000; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">📞 Atendimento</span>
+      </div>
+    </section>
+
+    <!-- Visual do Funil de Vendas -->
+    <section class="produto4-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Funil de Vendas Inteligente</h2>
+      
+      <div class="funnel-visual" style="display: flex; justify-content: center; align-items: center; margin: 30px 0; gap: 10px;">
+        <div class="funnel-stage" style="background: #252525; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #333; min-width: 120px;">
+          <div style="color: #d4af37; font-weight: bold;">👥 Leads</div>
+          <div style="color: #cccccc; font-size: 0.9rem;">1.000</div>
+        </div>
+        <div style="color: #8b0000; font-size: 1.5rem;">→</div>
+        <div class="funnel-stage" style="background: #252525; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #333; min-width: 120px;">
+          <div style="color: #d4af37; font-weight: bold;">🤝 Qualificados</div>
+          <div style="color: #cccccc; font-size: 0.9rem;">400</div>
+        </div>
+        <div style="color: #8b0000; font-size: 1.5rem;">→</div>
+        <div class="funnel-stage" style="background: #252525; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #333; min-width: 120px;">
+          <div style="color: #d4af37; font-weight: bold;">💼 Oportunidades</div>
+          <div style="color: #cccccc; font-size: 0.9rem;">150</div>
+        </div>
+        <div style="color: #8b0000; font-size: 1.5rem;">→</div>
+        <div class="funnel-stage" style="background: #252525; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #333; min-width: 120px;">
+          <div style="color: #d4af37; font-weight: bold;">💰 Vendas</div>
+          <div style="color: #cccccc; font-size: 0.9rem;">75</div>
+        </div>
+      </div>
+      
+      <p style="color: #cccccc; text-align: center; font-style: italic;">
+        Taxa de conversão: 7.5% (vs. 2-3% da concorrência)
+      </p>
+    </section>
+
+    <!-- Seção Principal -->
+    <section class="produto4-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Recursos do CRM</h2>
+      
+      <div class="produto4-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+        
+        <div class="produto4-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">📊 Gestão de Leads</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Captura, qualificação e distribuição automática de leads.</p>
+        </div>
+
+        <div class="produto4-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">🤖 Automação de Vendas</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Workflows inteligentes para nurturing e follow-up.</p>
+        </div>
+
+        <div class="produto4-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">📧 Marketing Digital</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Campanhas por email, SMS e redes sociais integradas.</p>
+        </div>
+
+        <div class="produto4-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">📞 Atendimento</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Central de relacionamento com histórico completo.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section class="vamp-sales" style="background: #252525; padding: 30px; border-radius: 10px; border-left: 4px solid #8b0000; margin: 30px 0;">
+      <h2 style="color: #d4af37; margin-bottom: 20px; font-size: 1.8rem;">Resultados Comprovados</h2>
+      <ul style="color: #cccccc; line-height: 1.8; padding-left: 20px;">
+        <li style="margin-bottom: 10px;">📈 <strong>Aumento de 45% nas vendas</strong> em 6 meses</li>
+        <li style="margin-bottom: 10px;">⏱️ <strong>Redução de 60% no tempo</strong> do ciclo de vendas</li>
+        <li style="margin-bottom: 10px;">🎯 <strong>Taxa de conversão 3x maior</strong> que a média do mercado</li>
+        <li style="margin-bottom: 10px;">💬 <strong>Atendimento 24/7</strong> via chatbot integrado</li>
+        <li style="margin-bottom: 10px;">🔄 <strong>Integração com +50 plataformas</strong> incluindo WhatsApp</li>
+        <li style="margin-bottom: 10px;">📊 <strong>Relatórios em tempo real</strong> com IA preditiva</li>
+      </ul>
+    </section>
+
+    <!-- Integrações -->
+    <section class="produto4-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Integrações Nativas</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; text-align: center;">
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">📧</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">Gmail/Outlook</p>
+        </div>
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">💬</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">WhatsApp</p>
+        </div>
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">📱</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">Instagram</p>
+        </div>
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">💳</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">Pagamentos</p>
+        </div>
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">🌐</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">Websites</p>
+        </div>
+        <div style="background: #252525; padding: 15px; border-radius: 8px;">
+          <div style="color: #d4af37; font-size: 1.5rem;">📊</div>
+          <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.9rem;">ERP/BI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="cadastro.html" class="produto4-back-link" style="display: inline-block; background: #8b0000; color: white; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; margin-right: 15px;">
+        Testar Gratuitamente
+      </a>
+      <a href="produtos.html" class="produto4-back-link" style="display: inline-block; background: #333; color: white; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease;">
+        Voltar ao Catálogo
+      </a>
+    </div>
+  </main>
+
+  <footer style="background: #111111; color: #cccccc; padding: 2rem 1rem; margin-top: 3rem; border-top: 3px solid #333333; text-align: center;">
+    <p style="margin: 0 0 1rem 0; font-size: 1rem;">&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
+    <p style="margin: 0;">
+      <a href="index.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Início</a> | 
+      <a href="produtos.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Produtos</a>
+    </p>
+  </footer>
+</body>
+</html>
