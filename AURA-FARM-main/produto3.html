@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NecroBot — NecroCorp</title>
+  <meta name="description" content="NecroBot – assistente de automação avançada para processos empresariais.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .necrobot-hero {
+        text-align: center;
+        padding: 50px 30px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        border-radius: 15px;
+        margin-bottom: 40px;
+        border: 2px solid #333;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .necrobot-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #8b0000, #d4af37, #8b0000);
+    }
+    
+    .necrobot-price {
+        background: #8b0000;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        display: inline-block;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
+    }
+    
+    .necrobot-automation {
+        background: #252525;
+        padding: 30px;
+        border-radius: 10px;
+        border-left: 4px solid #d4af37;
+        margin: 30px 0;
+    }
+    
+    .automation-badge {
+        display: inline-block;
+        background: #d4af37;
+        color: #000;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 5px;
+    }
+    
+    .workflow-demo {
+        background: linear-gradient(135deg, #252525, #1a1a1a);
+        padding: 25px;
+        border-radius: 10px;
+        border: 2px solid #333;
+        margin: 20px 0;
+        font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body class="produto3-body">
+  <!-- CSS INLINE no header -->
+  <header style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); color: #ffffff; padding: 2rem 1rem; border-bottom: 4px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    <h1 style="margin: 0 0 1rem 0; font-size: 2.8rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">NecroBot</h1>
+    
+    <nav style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Início</a>
+      <a href="produtos.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Produtos</a>
+      <a href="sobre.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Sobre</a>
+      <a href="cadastro.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="produto3-main">
+    <!-- Hero Section -->
+    <section class="necrobot-hero" style="text-align: center; padding: 50px 30px; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 15px; margin-bottom: 40px; border: 2px solid #333; position: relative;">
+      <h2 class="produto3-h1" style="color: #d4af37; text-align: center; margin-bottom: 20px; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Automação Inteligente de Processos</h2>
+      
+      <div class="necrobot-price" style="background: #8b0000; color: white; padding: 10px 20px; border-radius: 25px; font-size: 1.3rem; font-weight: bold; display: inline-block; margin: 20px 0; box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);">
+        R$ 5.800,00/mês
+      </div>
+      
+      <p class="produto3-description" style="color: #e0e0e0; line-height: 1.8; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+        Assistente de automação para rotinas operacionais, integrações API e orquestração de workflows com IA avançada.
+      </p>
+      
+      <div style="margin-top: 25px;">
+        <span class="automation-badge" style="display: inline-block; background: #d4af37; color: #000; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">🤖 RPA</span>
+        <span class="automation-badge" style="display: inline-block; background: #d4af37; color: #000; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">🔗 API Integration</span>
+        <span class="automation-badge" style="display: inline-block; background: #d4af37; color: #000; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">🧠 Machine Learning</span>
+        <span class="automation-badge" style="display: inline-block; background: #d4af37; color: #000; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin: 5px;">⚡ Workflows</span>
+      </div>
+    </section>
+
+    <!-- Seção Principal -->
+    <section class="produto3-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #8b0000;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Capacidades de Automação</h2>
+      
+      <div class="produto3-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+        
+        <div class="produto3-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">🤖 RPA Avançado</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Automação de processos robóticos para tarefas repetitivas.</p>
+        </div>
+
+        <div class="produto3-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">🔗 Integração API</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Conexão com +500 sistemas via REST, SOAP e GraphQL.</p>
+        </div>
+
+        <div class="produto3-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">🧠 IA Preditiva</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Machine learning para otimização automática de processos.</p>
+        </div>
+
+        <div class="produto3-feature" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
+          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">⚡ Orquestração</h3>
+          <p style="color: #cccccc; line-height: 1.6;">Workflows complexos com condições e triggers avançados.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Demonstração de Workflow -->
+    <section class="produto3-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #8b0000;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Exemplo de Workflow</h2>
+      
+      <div class="workflow-demo" style="background: linear-gradient(135deg, #252525, #1a1a1a); padding: 25px; border-radius: 10px; border: 2px solid #333; margin: 20px 0; font-family: 'Courier New', monospace;">
+        <div style="color: #d4af37; margin-bottom: 15px;">🤖 <strong>Processo: Faturamento Automático</strong></div>
+        <div style="color: #cccccc; line-height: 1.8;">
+          <div>1. 📧 Recebe email com XML da nota fiscal</div>
+          <div>2. 🔍 Extrai dados automaticamente (NLP)</div>
+          <div>3. 💾 Registra no ERP corporativo</div>
+          <div>4. 📊 Atualiza dashboard financeiro</div>
+          <div>5. 👤 Notifica gestor via Slack</div>
+          <div>6. ✅ Arquiva documento no cloud</div>
+        </div>
+        <div style="color: #8b0000; margin-top: 15px; font-style: italic;">⚡ Tempo de execução: 45 segundos (vs. 15 minutos manual)</div>
+      </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section class="necrobot-automation" style="background: #252525; padding: 30px; border-radius: 10px; border-left: 4px solid #d4af37; margin: 30px 0;">
+      <h2 style="color: #d4af37; margin-bottom: 20px; font-size: 1.8rem;">Vantagens da Automação</h2>
+      <ul style="color: #cccccc; line-height: 1.8; padding-left: 20px;">
+        <li style="margin-bottom: 10px;">⏱️ <strong>Redução de 80% no tempo</strong> de processos manuais</li>
+        <li style="margin-bottom: 10px;">🎯 <strong>Erros próximos de zero</strong> - Eliminação de falhas humanas</li>
+        <li style="margin-bottom: 10px;">💰 <strong>ROI em 6 meses</strong> - Retorno rápido do investimento</li>
+        <li style="margin-bottom: 10px;">📈 <strong>Escalabilidade infinita</strong> - Processe milhares de tarefas simultaneamente</li>
+        <li style="margin-bottom: 10px;">🔧 <strong>Implantação rápida</strong> - Primeiros bots em 2 semanas</li>
+        <li style="margin-bottom: 10px;">🔄 <strong>Manutenção automática</strong> - Atualizações sem interrupção</li>
+      </ul>
+    </section>
+
+    <!-- Casos de Uso -->
+    <section class="produto3-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #8b0000;">
+      <h2 style="color: #d4af37; text-align: center; margin-bottom: 30px; font-size: 2.2rem;">Casos de Uso Comuns</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div style="background: #252525; padding: 20px; border-radius: 8px; border-left: 4px solid #d4af37;">
+          <h4 style="color: #d4af37; margin-bottom: 10px;">🏦 Setor Financeiro</h4>
+          <p style="color: #cccccc; margin: 0; font-size: 0.9rem;">Conciliação bancária, faturamento, relatórios regulatórios</p>
+        </div>
+        <div style="background: #252525; padding: 20px; border-radius: 8px; border-left: 4px solid #d4af37;">
+          <h4 style="color: #d4af37; margin-bottom: 10px;">🛒 Varejo & E-commerce</h4>
+          <p style="color: #cccccc; margin: 0; font-size: 0.9rem;">Processamento de pedidos, estoque, atendimento ao cliente</p>
+        </div>
+        <div style="background: #252525; padding: 20px; border-radius: 8px; border-left: 4px solid #d4af37;">
+          <h4 style="color: #d4af37; margin-bottom: 10px;">🏥 Saúde</h4>
+          <p style="color: #cccccc; margin: 0; font-size: 0.9rem;">Agendamentos, prontuários, faturamento médico</p>
+        </div>
+        <div style="background: #252525; padding: 20px; border-radius: 8px; border-left: 4px solid #d4af37;">
+          <h4 style="color: #d4af37; margin-bottom: 10px;">🏭 Manufatura</h4>
+          <p style="color: #cccccc; margin: 0; font-size: 0.9rem;">Controle de produção, qualidade, supply chain</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="cadastro.html" class="produto3-back-link" style="display: inline-block; background: #8b0000; color: white; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; margin-right: 15px;">
+        Agendar Demonstração
+      </a>
+      <a href="produtos.html" class="produto3-back-link" style="display: inline-block; background: #333; color: white; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease;">
+        Voltar ao Catálogo
+      </a>
+    </div>
+  </main>
+
+  <footer style="background: #111111; color: #cccccc; padding: 2rem 1rem; margin-top: 3rem; border-top: 3px solid #333333; text-align: center;">
+    <p style="margin: 0 0 1rem 0; font-size: 1rem;">&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
+    <p style="margin: 0;">
+      <a href="index.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Início</a> | 
+      <a href="produtos.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Produtos</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" role="img" aria-labelledby="at ad">
+  <title id="at">Animação — Pulsar</title>
+  <desc id="ad">Círculos que pulsam para dar sensação de atividade</desc>
+  <rect width="100%" height="100%" fill="#081229"/>
+  <g>
+    <circle cx="120" cy="100" r="18" fill="#ff6b6b">
+      <animate attributeName="r" values="18;30;18" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="100" r="12" fill="#ffd166">
+      <animate attributeName="r" values="12;22;12" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="100" r="24" fill="#06d6a0">
+      <animate attributeName="r" values="24;36;24" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="620" y="40" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="14">Atividade</text>
+</svg>
