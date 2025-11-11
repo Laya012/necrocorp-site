@@ -1,253 +1,282 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NecroCorp - Sobre</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="sobre-body">
-    <header>
-        <h1>NecroCorp</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="cadastro.html">Cadastro</a>
-            <a href="sobre.html">Sobre</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2 style="text-align: center; color: #ff8a8a; margin-bottom: 2rem;">Sobre a NecroCorp</h2>
-        
-        <div style="background: #1a1a1a; padding: 2rem; border-radius: 10px; border: 2px solid #333;">
-            <p style="color: #cccccc; line-height: 1.6; margin-bottom: 1rem;">
-                A NecroCorp é especializada em soluções para empresas do mundo zumbi. 
-                Oferecemos produtos e serviços de alta qualidade para atender às necessidades 
-                da comunidade não-morta.
-            </p>
-            
-            <p style="color: #cccccc; line-height: 1.6;">
-                Nossa missão é fornecer os melhores cérebros, ossos e acessórios 
-                para zumbis modernos e exigentes.
-            </p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 NecroCorp - Todos os direitos reservados</p>
-    </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-br">
-<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre — NecroCorp</title>
-  <meta name="description" content="Sobre a NecroCorp — missão, história e nossa equipe.">
+  <meta name="description" content="Sobre a NecroCorp — missão, visão e contato.">
   
   <!-- CSS EXTERNO -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- CSS INCORPORADO -->
+  <!-- CSS INTERNO -->
   <style>
-    /* CSS INCORPORADO - Estilos específicos da página Sobre */
-    .sobre-hero {
-        text-align: center;
-        padding: 50px 30px;
-        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-        border-radius: 15px;
-        margin-bottom: 40px;
-        border: 2px solid #333;
-        position: relative;
-        overflow: hidden;
+    .sobre-section {
+      background: rgba(26, 26, 26, 0.9);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      border: 2px solid #8b0000;
     }
     
-    .sobre-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #8b0000, #d4af37, #8b0000);
-    }
-    
-    .mission-values {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin-top: 30px;
-    }
-    
-    .mission-card {
-        background: #252525;
-        padding: 25px;
-        border-radius: 10px;
-        text-align: center;
-        border: 2px solid #333;
-        transition: all 0.3s ease;
-    }
-    
-    .mission-card:hover {
-        border-color: #d4af37;
-        transform: translateY(-5px);
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
     
     .media-container {
-        background: #252525;
-        padding: 25px;
-        border-radius: 10px;
-        margin: 20px 0;
-        border: 2px solid #333;
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #333;
+      margin: 1.5rem 0;
+    }
+    
+    .media-container h3 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #8b0000;
+      padding-bottom: 0.5rem;
+    }
+    
+    figure {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    figcaption {
+      color: #888;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    video, audio {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    
+    code {
+      background: #2d2d2d;
+      color: #ff8a8a;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .destaque {
+      background: rgba(139, 0, 0, 0.2);
+      border-left: 4px solid #ff8a8a;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body class="sobre-body">
-  <!-- CSS INLINE no header -->
-  <header style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); color: #ffffff; padding: 2rem 1rem; border-bottom: 4px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-    <h1 style="margin: 0 0 1rem 0; font-size: 2.8rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">Sobre a NecroCorp</h1>
-    
-    <nav style="text-align: center; margin-top: 1.5rem;">
-      <a href="index.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Início</a>
-      <a href="produtos.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Produtos</a>
-      <a href="cadastro.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Cadastro</a>
-      <a href="parceiros.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Parceiros</a>
+  <header>
+    <h1>NecroCorp</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="cadastro.html">Cadastrar Empresa</a>
+      <a href="sobre.html">Sobre</a>
     </nav>
   </header>
 
-  <main class="sobre-main">
-    <!-- Hero Section -->
-    <section class="sobre-hero" style="text-align: center; padding: 50px 30px; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 15px; margin-bottom: 40px; border: 2px solid #333; position: relative;">
-      <h2 class="sobre-h1" style="color: #d4af37; text-align: center; margin-bottom: 20px; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Transformação Digital com Excelência</h2>
+  <main>
+    <!-- CSS INLINE aplicado aqui -->
+    <section class="sobre-section" style="border-left: 6px solid #d4af37;">
+      <h2 style="color: #ff8a8a; 
+                 text-align: center; 
+                 font-size: 2.5rem;
+                 margin-bottom: 1.5rem;
+                 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        🧟‍♂️ Sobre a NecroCorp
+      </h2>
       
-      <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
-        Desde 2015, a NecroCorp tem liderado a revolução digital empresarial com soluções inovadoras e consultoria estratégica.
-      </p>
-    </section>
+      <div id="mission" style="margin-bottom: 2rem;">
+        <h3 style="color: #d4af37; 
+                   border-bottom: 2px solid #8b0000; 
+                   padding-bottom: 0.5rem;
+                   margin-bottom: 1rem;">
+          Nossa Missão
+        </h3>
+        <p style="color: #c2ffc2; line-height: 1.7; font-size: 1.1rem;">
+          A <strong style="color: #ff8a8a;">NecroCorp</strong> fornece soluções tecnológicas sobrenaturais 
+          e consultoria especializada para <em>transformação digital zumbi</em>. 
+          Ressuscitamos negócios e trazemos inovação do mundo dos mortos-vivos.
+        </p>
+      </div>
 
-    <!-- Seção Missão e Valores -->
-    <section class="sobre-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
-      <h2 class="sobre-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Nossa Missão e Valores</h2>
-      
-      <div class="mission-values" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px;">
-        
-        <div class="mission-card" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
-          <div style="color: #d4af37; font-size: 3rem; margin-bottom: 15px;">🎯</div>
-          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">Missão</h3>
-          <p style="color: #cccccc; line-height: 1.6;">Fornecer soluções tecnológicas e consultoria para transformação digital empresarial com excelência e inovação.</p>
-        </div>
-
-        <div class="mission-card" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
-          <div style="color: #d4af37; font-size: 3rem; margin-bottom: 15px;">👁️</div>
-          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">Visão</h3>
-          <p style="color: #cccccc; line-height: 1.6;">Ser referência global em soluções digitais até 2030, impactando positivamente o ecossistema empresarial.</p>
-        </div>
-
-        <div class="mission-card" style="background: #252525; padding: 25px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
-          <div style="color: #d4af37; font-size: 3rem; margin-bottom: 15px;">💎</div>
-          <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.3rem;">Valores</h3>
-          <p style="color: #cccccc; line-height: 1.6;">Inovação, Excelência, Transparência, Segurança e Compromisso com Resultados.</p>
-        </div>
-
+      <div id="vision" style="margin-bottom: 2rem;">
+        <h3 style="color: #d4af37; 
+                   border-bottom: 2px solid #8b0000; 
+                   padding-bottom: 0.5rem;
+                   margin-bottom: 1rem;">
+          Nossa Visão
+        </h3>
+        <p style="color: #c2ffc2; line-height: 1.7;">
+          Ser a líder mundial em soluções corporativas para a comunidade não-morta, 
+          oferecendo tecnologia de ponta e consultoria estratégica para negócios que 
+          <strong style="color: #ff8a8a;">nunca morrem</strong>.
+        </p>
       </div>
     </section>
 
-    <!-- Seção Galeria -->
-    <section class="sobre-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
-      <h2 class="sobre-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Nossa Estrutura</h2>
+    <!-- Galeria -->
+    <section class="sobre-section">
+      <h2 style="color: #ff8a8a; 
+                 text-align: center;
+                 margin-bottom: 1.5rem;">
+        🖼️ Nossa Infraestrutura
+      </h2>
       
-      <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">
-        Conheça nossa infraestrutura e equipe dedicada à excelência tecnológica.
-      </p>
-      
-      <div class="sobre-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px;">
-        
-        <div class="sobre-figure" style="background: #252525; padding: 20px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
-          <img src="farmando.png" alt="Equipe da NecroCorp em reunião estratégica" class="sobre-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #444;">
-          <figcaption class="sobre-figcaption" style="color: #cccccc; font-style: italic; margin-top: 15px; font-size: 0.9rem;">
+      <div class="destaque">
+        <p style="color: #ffc2c2; margin: 0; text-align: center;">
+          <strong>Galeria ilustrativa</strong> — substitua os links abaixo por imagens locais se preferir.
+        </p>
+      </div>
+
+      <div class="galeria-grid">
+        <figure style="background: rgba(90, 45, 12, 0.2); 
+                      padding: 1rem; 
+                      border-radius: 8px;
+                      border: 1px solid #5a2d0c;">
+          <img src="farmando.png" 
+               alt="Equipe da NecroCorp em reunião estratégica" 
+               style="width: 100%; 
+                      border-radius: 6px; 
+                      border: 2px solid #8b0000;
+                      margin-bottom: 0.5rem;">
+          <figcaption style="color: #d4af37; font-weight: bold;">
             Equipe da NecroCorp em reunião estratégica
           </figcaption>
-        </div>
+        </figure>
 
-        <div class="sobre-figure" style="background: #252525; padding: 20px; border-radius: 10px; text-align: center; border: 2px solid #333; transition: all 0.3s ease;">
-          <img src="server.png" alt="Sala de servidores da NecroCorp" class="sobre-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #444;">
-          <figcaption class="sobre-figcaption" style="color: #cccccc; font-style: italic; margin-top: 15px; font-size: 0.9rem;">
-            Sala de servidores e infraestrutura de ponta
+        <figure style="background: rgba(90, 45, 12, 0.2); 
+                      padding: 1rem; 
+                      border-radius: 8px;
+                      border: 1px solid #5a2d0c;">
+          <img src="server.png" 
+               alt="Sala de servidores e infraestrutura da NecroCorp" 
+               style="width: 100%; 
+                      border-radius: 6px; 
+                      border: 2px solid #8b0000;
+                      margin-bottom: 0.5rem;">
+          <figcaption style="color: #d4af37; font-weight: bold;">
+            Sala de servidores e infraestrutura
           </figcaption>
-        </div>
-
+        </figure>
       </div>
     </section>
 
-    <!-- Seção Vídeo -->
-    <section class="sobre-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
-      <h2 class="sobre-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Vídeo Institucional</h2>
-      
-      <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">
-        Assista ao nosso vídeo institucional e conheça mais sobre nossa história e cultura.
-      </p>
-      
-      <div class="media-container" style="background: #252525; padding: 25px; border-radius: 10px; margin: 20px 0; border: 2px solid #333;">
-        <div class="sobre-media" style="text-align: center; margin: 30px 0;">
-          <video controls width="640" poster="media/illustration1.svg" aria-label="Vídeo institucional da NecroCorp" class="sobre-video" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    <!-- Vídeo -->
+    <section class="sobre-section">
+      <div class="media-container">
+        <h3>🎥 Vídeo Institucional</h3>
+        <p style="color: #cccccc; line-height: 1.6; margin-bottom: 1rem;">
+          Assista ao nosso vídeo institucional e conheça mais sobre a NecroCorp.
+        </p>
+        
+        <div style="text-align: center;">
+          <video controls 
+                 style="max-width: 100%; 
+                        border-radius: 8px; 
+                        border: 3px solid #5a2d0c;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.3);"
+                 aria-label="Vídeo institucional da NecroCorp">
             <source src="rickroll.mp4" type="video/mp4">
             <source src="rickroll.mp4" type="video/webm">
-            <object data="animation.svg" type="image/svg+xml" aria-label="Animação alternativa"> 
-              Seu navegador não suporta vídeo/objeto SVG. <a href="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" style="color: #8b0000; text-decoration: none; font-weight: bold;">Baixe o vídeo</a>.
-            </object>
+            Seu navegador não suporta o elemento de vídeo.
           </video>
         </div>
-        
-        <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px; text-align: center;">
-          Observação: para legendas, adicione uma tag <code class="sobre-code" style="background: #2d2d2d; color: #d4af37; padding: 2px 6px; border-radius: 4px;">&lt;track kind="captions" srclang="pt" src="legendavideo.vtt"&gt;</code> apontando para um arquivo VTT.
-        </p>
+
+        <div class="destaque" style="margin-top: 1rem;">
+          <p style="color: #ffc2c2; margin: 0; font-size: 0.9rem;">
+            <strong>Observação:</strong> Para legendas, adicione uma tag 
+            <code>&lt;track kind="captions" srclang="pt" src="legendavideo.vtt"&gt;</code> 
+            apontando para um arquivo VTT.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Seção Áudio -->
-    <section class="sobre-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
-      <h2 class="sobre-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Mensagem da Diretoria</h2>
-      
-      <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">
-        Ouça a mensagem especial do nosso CEO sobre o futuro da transformação digital.
-      </p>
-      
-      <div class="media-container" style="background: #252525; padding: 25px; border-radius: 10px; margin: 20px 0; border: 2px solid #333;">
-        <div class="sobre-media" style="text-align: center; margin: 30px 0;">
-          <audio controls aria-label="Mensagem da diretoria da NecroCorp" class="sobre-audio" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    <!-- Áudio -->
+    <section class="sobre-section">
+      <div class="media-container">
+        <h3>🎵 Áudio Institucional</h3>
+        <p style="color: #cccccc; line-height: 1.6; margin-bottom: 1rem;">
+          Ouça nossa mensagem em áudio.
+        </p>
+        
+        <div style="text-align: center;">
+          <audio controls 
+                 style="width: 100%; 
+                        max-width: 500px; 
+                        border-radius: 25px;
+                        border: 2px solid #8b0000;"
+                 aria-label="Áudio institucional da NecroCorp">
             <source src="Evanescence_-_Bring_Me_To_Life_(mp3.pm) (1).mp3" type="audio/mp3">
-            Seu navegador não suporta o elemento de áudio. <a href="Evanescence_-_Bring_Me_To_Life_(mp3.pm) (1).mp3" style="color: #8b0000; text-decoration: none; font-weight: bold;">Baixe o áudio</a>.
+            Seu navegador não suporta o elemento de áudio.
           </audio>
         </div>
-        
-        <p class="sobre-p" style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px; text-align: center;">
-          Player de áudio com controles nativos. Arquivo local em <code class="sobre-code" style="background: #2d2d2d; color: #d4af37; padding: 2px 6px; border-radius: 4px;">media/ambient.mp3</code>.
+
+        <p style="color: #888; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">
+          Arquivo local: <code>Evanescence_-_Bring_Me_To_Life_(mp3.pm) (1).mp3</code>
         </p>
       </div>
     </section>
 
-    <!-- Seção Contato -->
-    <section class="sobre-section" style="background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); border-left: 6px solid #d4af37;">
-      <h2 class="sobre-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Entre em Contato</h2>
+    <!-- Contato -->
+    <section class="sobre-section" style="background: linear-gradient(135deg, rgba(26,13,13,0.9), rgba(45,23,23,0.9));">
+      <h2 style="color: #ff8a8a; text-align: center; margin-bottom: 1.5rem;">📞 Contato</h2>
       
-      <div style="text-align: center; margin-top: 25px;">
-        <a href="cadastro.html" style="display: inline-block; background: #8b0000; color: white; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; margin: 10px;">
-          Fale Conosco
-        </a>
-        <a href="parceiros.html" style="display: inline-block; background: #d4af37; color: #000; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; margin: 10px;">
-          Seja um Parceiro
-        </a>
+      <div style="text-align: center;">
+        <p style="color: #c2ffc2; margin-bottom: 1rem;">
+          Entre em contato conosco para transformar seu negócio!
+        </p>
+        
+        <div style="display: inline-block; text-align: left; background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 8px;">
+          <p style="color: #d4af37; margin: 0.5rem 0;">
+            📧 Email: <span style="color: #8aff8a;">contato@necrocorp.com</span>
+          </p>
+          <p style="color: #d4af37; margin: 0.5rem 0;">
+            📞 Telefone: <span style="color: #8aff8a;">(11) 9999-9999</span>
+          </p>
+          <p style="color: #d4af37; margin: 0.5rem 0;">
+            🏢 Endereço: <span style="color: #8aff8a;">Rua dos Mortos-Vivos, 666</span>
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer style="background: #111111; color: #cccccc; padding: 2rem 1rem; margin-top: 3rem; border-top: 3px solid #333333; text-align: center;">
-    <p style="margin: 0 0 1rem 0; font-size: 1rem;">&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
-    <p style="margin: 0;">
-      <a href="index.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Início</a> | 
-      <a href="sobre.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Sobre</a> |
-      <a href="contato.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Contato</a>
+  <footer style="background: #111111; 
+                color: #cccccc; 
+                padding: 2rem 1rem; 
+                text-align: center; 
+                margin-top: 3rem;
+                border-top: 3px solid #333333;">
+    <p style="margin-bottom: 1rem;">&copy; 2025 NecroCorp. Todos os direitos zumbis reservados.</p>
+    <p>
+      <a href="index.html" 
+         style="color: #d4af37; 
+                text-decoration: none; 
+                margin: 0 10px;
+                transition: color 0.3s ease;"
+         onmouseover="this.style.color='#ff8a8a';"
+         onmouseout="this.style.color='#d4af37';">Início</a> | 
+      <a href="produtos.html" 
+         style="color: #d4af37; 
+                text-decoration: none; 
+                margin: 0 10px;
+                transition: color 0.3s ease;"
+         onmouseover="this.style.color='#ff8a8a';"
+         onmouseout="this.style.color='#d4af37';">Produtos</a>
     </p>
   </footer>
 </body>
