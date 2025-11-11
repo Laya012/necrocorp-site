@@ -1,110 +1,276 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NecroCorp</title>
-    <meta name="description" content="NecroCorp - soluções e consultoria">
-        <link rel="stylesheet" href="style.css">
-    <style>
-    </style>
-</head>
-<body class="index-body">
-    <header style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); color: #ffffff; padding: 2rem 1rem; border-bottom: 4px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-        <h1 style="margin: 0 0 1rem 0; font-size: 2.8rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">NecroCorp</h1>
-        
-        <nav style="text-align: center; margin-top: 1.5rem;">
-            <a href="index.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Início</a>
-            <a href="produto.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Produtos</a>
-            <a href="cadastro.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Cadastrar Empresa</a>
-            <a href="sobre.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Sobre</a>
-            <a href="parceiros.html" style="color: #d4af37; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 5px; transition: all 0.3s ease;">Parceiros</a>
-        </nav>
-    </header>
+ {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <main class="index-main">
-        <section id="inicio" class="index-section" style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h2 class="index-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Apresentação</h2>
-            
-            <figure style="margin: 25px 0; text-align: center;">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Escritório da NecroCorp" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
-                <figcaption style="font-style: italic; color: #888; margin-top: 12px; font-size: 0.9rem;">Nosso centro de operações - inovação e estratégia.</figcaption>
-            </figure>
-            
-            <p class="index-p" style="font-size: 1.1rem; line-height: 1.7; color: #e0e0e0; text-align: justify;">A NecroCorp oferece soluções completas para empresas que desejam superar crises, ampliar participação de mercado e fortalecer sua marca. Unimos análise estratégica, tecnologia e criatividade para entregar resultados mensuráveis.</p>
-        </section>
+body {
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+    color: #8aff8a; /* Verde pútrido */
+    background-color: #1a1a1a;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(40, 72, 25, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(72, 40, 25, 0.3) 0%, transparent 20%);
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 15% 30%, rgba(139, 0, 0, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 85% 70%, rgba(139, 0, 0, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 70px 70px, 30px 30px;
+    pointer-events: none;
+    z-index: -1;
+}
+header {
+    background: linear-gradient(to bottom, #0a230a, #163016);
+    color: #c2ffc2;
+    padding: 1.5rem 1rem;
+    border-bottom: 3px solid #5a2d0c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(150, 150, 150, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(150, 150, 150, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.8rem;
+    text-shadow: 
+        2px 2px 0 #2d5a2d,
+        4px 4px 0 #1a3d1a,
+        0 0 10px #8aff8a;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #5a2d0c, transparent);
+    border-radius: 50%;
+}
+nav {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(42, 42, 42, 0.7);
+    border-radius: 5px;
+    border: 1px solid #5a2d0c;
+    display: inline-block;
+}
 
-        <section id="servicos" class="index-section" style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h2 class="index-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Serviços</h2>
-            
-            <div class="servicos-grid">
-                <article class="index-article" style="background: #252525; padding: 25px; border-radius: 8px; border-left: 4px solid #8b0000; margin-bottom: 25px; transition: transform 0.3s ease;">
-                    <h3 class="index-h3" style="color: #d4af37; margin-bottom: 15px; font-size: 1.4rem;">Consultoria Estratégica</h3>
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Consultoria" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-                    <p class="index-p" style="color: #cccccc; line-height: 1.6; margin-bottom: 15px;">Análise profunda do negócio, planejamento tático e execução orientada a resultados.</p>
-                    <p style="margin: 0;"><a href="Curriculo.html" style="color: #8b0000; text-decoration: none; font-weight: bold; border-bottom: 1px solid #8b0000; padding-bottom: 2px;">Saiba mais sobre nossa equipe</a></p>
-                </article>
+nav a {
+    color: #e6ffe6;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8b0000;
+    transition: width 0.3s ease;
+}
 
-                <article class="index-article" style="background: #252525; padding: 25px; border-radius: 8px; border-left: 4px solid #8b0000; margin-bottom: 25px; transition: transform 0.3s ease;">
-                    <h3 class="index-h3" style="color: #d4af37; margin-bottom: 15px; font-size: 1.4rem;">Gestão de Crises</h3>
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Gestão de Crises" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-                    <p class="index-p" style="color: #cccccc; line-height: 1.6; margin-bottom: 15px;">Planos de contingência e resposta imediata para proteger ativos e reputação.</p>
-                </article>
+nav a:hover {
+    color: #ff8a8a;
+    background-color: rgba(90, 45, 12, 0.3);
+}
 
-                <article class="index-article" style="background: #252525; padding: 25px; border-radius: 8px; border-left: 4px solid #8b0000; margin-bottom: 25px; transition: transform 0.3s ease;">
-                    <h3 class="index-h3" style="color: #d4af37; margin-bottom: 15px; font-size: 1.4rem;">Marketing e Posicionamento</h3>
-                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Marketing" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-                    <p class="index-p" style="color: #cccccc; line-height: 1.6; margin-bottom: 15px;">Campanhas criativas que aumentam visibilidade e atraem clientes qualificados.</p>
-                    <p style="margin: 0;"><a href="parceiros.html" style="color: #8b0000; text-decoration: none; font-weight: bold; border-bottom: 1px solid #8b0000; padding-bottom: 2px;">Nossos parceiros</a></p>
-                </article>
-            </div>
-        </section>
+nav a:hover::before {
+    width: 100%;
+}
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #3a5c3a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #3a5c3a, #5a2d0c, #3a5c3a);
+}
+h2 {
+    color: #c2ffc2;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #5a2d0c;
+    text-shadow: 1px 1px 2px #000;
+}
 
-        <section id="portfolio" class="index-section" style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h2 class="index-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Portfólio</h2>
-            
-            <div class="portfolio-grid">
-                <article class="index-article" style="background: #252525; padding: 25px; border-radius: 8px; border-left: 4px solid #d4af37; margin-bottom: 25px;">
-                    <h3 class="index-h3" style="color: #d4af37; margin-bottom: 15px; font-size: 1.4rem;">Projeto Sepulcral</h3>
-                    <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Projeto Sepulcral" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-                    <p class="index-p" style="color: #cccccc; line-height: 1.6; margin-bottom: 15px;">Recuperação e reestruturação completa de empresas com desempenho baixo.</p>
-                </article>
+h3 {
+    color: #a8ffa8;
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem;
+    text-shadow: 1px 1px 1px #000;
+}
+article {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background-color: rgba(35, 35, 35, 0.7);
+    border-left: 4px solid #5a2d0c;
+    border-radius: 0 5px 5px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-                <article class="index-article" style="background: #252525; padding: 25px; border-radius: 8px; border-left: 4px solid #d4af37; margin-bottom: 25px;">
-                    <h3 class="index-h3" style="color: #d4af37; margin-bottom: 15px; font-size: 1.4rem;">Case Fantasma</h3>
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Case Fantasma" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
-                    <p class="index-p" style="color: #cccccc; line-height: 1.6; margin-bottom: 15px;">Campanha de reposicionamento que dobrou a taxa de conversão em 6 meses.</p>
-                    <p style="margin: 0;"><a href="produto.html" style="color: #8b0000; text-decoration: none; font-weight: bold; border-bottom: 1px solid #8b0000; padding-bottom: 2px;">Ver produtos relacionados</a></p>
-                </article>
-            </div>
-        </section>
+article:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #5a2d0c;
+    filter: sepia(0.3) contrast(1.1) brightness(0.9);
+    transition: filter 0.3s ease;
+}
 
-        <section id="sobre" class="index-section" style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h2 class="index-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Sobre a NecroCorp</h2>
-            <p class="index-p" style="font-size: 1.1rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 20px;">Somos uma consultoria dedicada a transformar problemas complexos em oportunidades estratégicas. Atuamos com confidencialidade, criatividade e compromisso com resultados.</p>
-            <p style="margin: 0;"><a href="sobre.html" style="color: #8b0000; text-decoration: none; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid #8b0000; padding-bottom: 3px;">Leia mais sobre nossa história</a></p>
-        </section>
+img:hover {
+    filter: sepia(0.5) contrast(1.2) brightness(1);
+}
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
 
-        <section id="contato" class="index-section" style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h2 class="index-h2" style="color: #d4af37; border-bottom: 2px solid #8b0000; padding-bottom: 15px; margin-top: 0; font-size: 2rem;">Contato</h2>
-            <p class="index-p" style="font-size: 1.1rem; color: #e0e0e0; margin-bottom: 20px;">Para orçamentos e parcerias:</p>
-            <ul style="color: #cccccc; line-height: 1.8; margin-bottom: 25px;">
-                <li style="margin-bottom: 10px;">Email: <a href="mailto:contato@necrocorp.com" style="color: #8b0000; text-decoration: none; font-weight: bold;">contato@necrocorp.com</a></li>
-                <li style="margin-bottom: 10px;">Telefone: <a href="tel:+559999999999" style="color: #8b0000; text-decoration: none; font-weight: bold;">(99) 99999-9999</a></li>
-                <li style="margin-bottom: 10px;">Endereço: Rua das Sombras, 666 - Bairro Abissal</li>
-            </ul>
-            <p style="margin: 0; text-align: center;">
-                <a href="cadastro.html" style="background: #8b0000; color: white; text-decoration: none; padding: 15px 30px; border-radius: 5px; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: background 0.3s ease;">Cadastrar minha empresa</a>
-            </p>
-        </section>
-    </main>
+figcaption {
+    font-style: italic;
+    color: #8a8a8a;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
 
-    <footer style="background: #111111; color: #cccccc; padding: 2rem 1rem; margin-top: 3rem; border-top: 3px solid #333333; text-align: center;">
-        <p style="margin: 0 0 1rem 0; font-size: 1rem;">&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
-        <p style="margin: 0;">
-            <a href="index.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Currículo</a> | 
-            <a href="parceiros.html" style="color: #d4af37; text-decoration: none; margin: 0 10px; font-weight: bold;">Parceiros</a>
-        </p>
-    </footer>
-</body>
-</html>
+li {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+li::before {
+    content: "☠";
+    position: absolute;
+    left: 0;
+    color: #5a2d0c;
+}
+a {
+    color: #8aff8a;
+    text-decoration: none;
+    border-bottom: 1px dotted #5a2d0c;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff8a8a;
+    border-bottom: 1px solid #8b0000;
+}
+footer {
+    background: linear-gradient(to top, #0a230a, #163016);
+    color: #8a8a8a;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-top: 3px solid #5a2d0c;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #c2ffc2;
+}
+ <h1 style="font-family: 'Times New Roman', serif; font-size: 2.8rem; text-shadow: 2px 2px 0 #2d5a2d, 4px 4px 0 #1a3d1a, 0 0 10px #8aff8a; letter-spacing: 3px; margin-bottom: 0.5rem; position: relative; display: inline-block;">NecroCorp</h1> */
+ <a href="index.html" style="color: #e6ffe6; margin-right: 1rem; text-decoration: none; font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 3px; transition: all 0.3s ease; position: relative;">Início</a> */
+ <article style="margin: 1.5rem 0; padding: 1.2rem; background-color: rgba(35, 35, 35, 0.7); border-left: 4px solid #5a2d0c; border-radius: 0 5px 5px 0; transition: transform 0.3s ease, box-shadow 0.3s ease;"> */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    article {
+        padding: 1rem;
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+.breathing {
+    animation: pulse 4s infinite ease-in-out;
+}
