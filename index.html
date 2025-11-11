@@ -1,250 +1,195 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NecroCorp</title>
-    <meta name="description" content="NecroCorp - soluções e consultoria">
-    <link rel="alternate" href="cadastro.html">
-    <style>
-        /* Reset e configurações básicas */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        /* Header */
-        header {
-            background: #111;
-            color: #fff;
-            padding: 1rem 0;
-        }
-        
-        header h1 {
-            text-align: center;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        
-        nav {
-            text-align: center;
-            padding: 0.5rem 0;
-        }
-        
-        nav a {
-            color: #ffd;
-            text-decoration: none;
-            margin: 0 0.5rem;
-            padding: 0.3rem 0.5rem;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-        
-        /* Main content */
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background: #111;
+        color: #fff;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    
+    header h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #fff;
+        font-size: 2.5rem;
+    }
+    
+    nav {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    
+    nav a {
+        color: #ffd;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    
+    nav a:hover {
+        color: #fff;
+        text-decoration: underline;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 4px;
+    }
+    
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 200px);
+    }
+    
+    section {
+        background: white;
+        margin: 2rem 0;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+        color: #111;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #111;
+        padding-bottom: 0.5rem;
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        color: #333;
+        margin: 1rem 0 0.5rem 0;
+        font-size: 1.3rem;
+    }
+    
+    article {
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        border-left: 4px solid #111;
+        background: #f9f9f9;
+        transition: transform 0.3s ease;
+    }
+    
+    article:hover {
+        transform: translateX(5px);
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    figure {
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+    figcaption {
+        font-style: italic;
+        color: #666;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    a:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+    
+    ul {
+        margin: 1rem 0;
+        padding-left: 2rem;
+    }
+    
+    li {
+        margin: 0.5rem 0;
+        line-height: 1.6;
+    }
+    
+    footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    
+    footer a {
+        color: #ffd;
+    }
+    
+    footer a:hover {
+        color: #fff;
+    }
+    
+    footer p {
+        margin: 0.5rem 0;
+    }
+        @media (max-width: 768px) {
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 1rem 0.5rem;
         }
         
         section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        nav a {
+            display: inline-block;
+            margin: 0.3rem;
+            padding: 0.5rem;
+        }
+        
+        article {
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        nav a {
+            display: block;
+            margin: 0.5rem 0;
+        }
+        
+        section {
+            padding: 1rem;
         }
         
         h2 {
-            color: #111;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #111;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
-        
-        h3 {
-            color: #333;
-            margin: 1rem 0 0.5rem 0;
-        }
-        
-        /* Articles dentro das seções */
-        article {
-            margin: 1.5rem 0;
-            padding: 1rem;
-            border-left: 3px solid #111;
-            background: #f9f9f9;
-        }
-        
-        /* Imagens */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        figure {
-            margin: 1.5rem 0;
-            text-align: center;
-        }
-        
-        figcaption {
-            font-style: italic;
-            color: #666;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        /* Links */
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Listas */
-        ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-        
-        li {
-            margin: 0.5rem 0;
-        }
-        
-        /* Footer */
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-        }
-        
-        footer a {
-            color: #ffd;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            main {
-                padding: 1rem 0.5rem;
-            }
-            
-            section {
-                padding: 1rem;
-                margin: 1rem 0;
-            }
-            
-            nav a {
-                display: block;
-                margin: 0.3rem 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>NecroCorp</h1>
-        <nav aria-label="menu">
-            <a href="index.html">Início</a>
-            <a href="produto.html">Produtos</a>
-            <a href="cadastro.html">Cadastrar Empresa</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="parceiros.html">Parceiros</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="inicio">
-            <h2>Apresentação</h2>
-            <figure>
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Escritório da NecroCorp">
-                <figcaption>Nosso centro de operações - inovação e estratégia.</figcaption>
-            </figure>
-            <p>A NecroCorp oferece soluções completas para empresas que desejam superar crises, ampliar participação de mercado e fortalecer sua marca. Unimos análise estratégica, tecnologia e criatividade para entregar resultados mensuráveis.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <article>
-                <h3>Consultoria Estratégica</h3>
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Consultoria">
-                <p>Análise profunda do negócio, planejamento tático e execução orientada a resultados.</p>
-                <p><a href="Curriculo.html">Saiba mais sobre nossa equipe</a></p>
-            </article>
-
-            <article>
-                <h3>Gestão de Crises</h3>
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Gestão de Crises">
-                <p>Planos de contingência e resposta imediata para proteger ativos e reputação.</p>
-            </article>
-
-            <article>
-                <h3>Marketing e Posicionamento</h3>
-                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Marketing">
-                <p>Campanhas criativas que aumentam visibilidade e atraem clientes qualificados.</p>
-                <p><a href="parceiros.html">Nossos parceiros</a></p>
-            </article>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfólio</h2>
-            <article>
-                <h3>Projeto Sepulcral</h3>
-                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Projeto Sepulcral">
-                <p>Recuperação e reestruturação completa de empresas com desempenho baixo.</p>
-            </article>
-
-            <article>
-                <h3>Case Fantasma</h3>
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Case Fantasma">
-                <p>Campanha de reposicionamento que dobrou a taxa de conversão em 6 meses.</p>
-                <p><a href="produto.html">Ver produtos relacionados</a></p>
-            </article>
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre a NecroCorp</h2>
-            <p>Somos uma consultoria dedicada a transformar problemas complexos em oportunidades estratégicas. Atuamos com confidencialidade, criatividade e compromisso com resultados.</p>
-            <p><a href="sobre.html">Leia mais sobre nossa história</a></p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Para orçamentos e parcerias:</p>
-            <ul>
-                <li>Email: <a href="mailto:contato@necrocorp.com">contato@necrocorp.com</a></li>
-                <li>Telefone: <a href="tel:+559999999999">(99) 99999-9999</a></li>
-                <li>Endereço: Rua das Sombras, 666 - Bairro Abissal</li>
-            </ul>
-            <p><a href="cadastro.html">Cadastrar minha empresa</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
-        <p><a href="index.html">Início</a> | <a href="parceiros.html">Parceiros</a></p>
-    </footer>
-</body>
-</html>
+    }
+</style>
