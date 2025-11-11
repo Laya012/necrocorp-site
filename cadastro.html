@@ -6,20 +6,219 @@
     <title>NecroCorp - Cadastro</title>
         <link rel="stylesheet" href="style.css">
         <style>
-        .formulario-zumbi {
-            background: rgba(139, 0, 0, 0.1);
-            border: 2px solid #8b0000;
-            padding: 30px;
-            border-radius: 10px;
+        .container-cadastro {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(26, 13, 13, 0.95);
+            border-radius: 15px;
+            border: 4px solid #8b0000;
+            overflow: hidden;
+            position: relative;
         }
         
-        .campo-cerebro {
-            background: #1a0a0a;
-            color: #8aff8a;
-            border: 1px solid #5a2d0c;
+        .container-cadastro::before {
+            content: "🧟‍♂️";
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 8rem;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .grupo-campo {
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .requerido::after {
+            content: " 🩸";
+            color: #ff8a8a;
         }
     </style>
 </head>
-<body class="cadastro-body"> 
+<body class="cadastro-body">
+    <header>
+        <h1>NecroCorp</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produto.html">Produtos</a>
+            <a href="cadastro.html">Cadastrar</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main style="padding: 30px 20px;">
+        <div class="container-cadastro">
+            <div style="background: linear-gradient(135deg, #8b0000, #a00); 
+                       padding: 25px; 
+                       text-align: center;
+                       border-bottom: 3px solid #5a2d0c;">
+                <h2 style="color: white; 
+                          margin: 0; 
+                          font-size: 2rem;
+                          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    💀 Cadastro de Empresa Zumbi
+                </h2>
+                <p style="color: #ffc2c2; margin: 10px 0 0 0;">
+                    Junte-se ao exército dos não-mortos!
+                </p>
+            </div>
+
+            <div style="padding: 30px;">
+                <form>
+                    <div class="grupo-campo">
+                        <label style="color: #d4af37; 
+                                     display: block; 
+                                     margin-bottom: 8px;
+                                     font-weight: bold;
+                                     font-size: 1.1rem;">
+                            Nome da Empresa <span class="requerido">*</span>
+                        </label>
+                        <input type="text" 
+                               style="width: 100%; 
+                                      padding: 14px; 
+                                      background: #1a0a0a; 
+                                      color: #8aff8a; 
+                                      border: 2px solid #5a2d0c;
+                                      border-radius: 8px;
+                                      font-size: 1rem;
+                                      transition: all 0.3s ease;"
+                               placeholder="Ex: Cérebros & Cia. Ltda"
+                               onfocus="this.style.borderColor='#ff8a8a'; this.style.boxShadow='0 0 10px rgba(255, 138, 138, 0.3)';"
+                               onblur="this.style.borderColor='#5a2d0c'; this.style.boxShadow='none';">
+                    </div>
+                    <div class="grupo-campo">
+                        <label style="color: #d4af37; 
+                                     display: block; 
+                                     margin-bottom: 8px;
+                                     font-weight: bold;
+                                     font-size: 1.1rem;">
+                            CNPJ <span class="requerido">*</span>
+                        </label>
+                        <input type="text" 
+                               style="width: 100%; 
+                                      padding: 14px; 
+                                      background: #1a0a0a; 
+                                      color: #8aff8a; 
+                                      border: 2px solid #5a2d0c;
+                                      border-radius: 8px;
+                                      font-size: 1rem;"
+                               placeholder="00.000.000/0001-00">
+                    </div>
+                    <div class="grupo-campo">
+                        <label style="color: #d4af37; 
+                                     display: block; 
+                                     margin-bottom: 8px;
+                                     font-weight: bold;
+                                     font-size: 1.1rem;">
+                            Tipo de Negócio Zumbi
+                        </label>
+                        <select style="width: 100%; 
+                                      padding: 14px; 
+                                      background: #1a0a0a; 
+                                      color: #8aff8a; 
+                                      border: 2px solid #5a2d0c;
+                                      border-radius: 8px;
+                                      font-size: 1rem;">
+                            <option value="">Selecione o tipo...</option>
+                            <option value="alimentacao">Alimentação de Cérebros</option>
+                            <option value="entretenimento">Entretenimento Macabro</option>
+                            <option value="consultoria">Consultoria Sobrenatural</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="grupo-campo">
+                        <label style="color: #d4af37; 
+                                     display: block; 
+                                     margin-bottom: 8px;
+                                     font-weight: bold;
+                                     font-size: 1.1rem;">
+                            Descrição do Negócio
+                        </label>
+                        <textarea style="width: 100%; 
+                                        padding: 14px; 
+                                        background: #1a0a0a; 
+                                        color: #8aff8a; 
+                                        border: 2px solid #5a2d0c;
+                                        border-radius: 8px;
+                                        font-size: 1rem;
+                                        min-height: 120px;
+                                        resize: vertical;"
+                                  placeholder="Descreva seu negócio zumbi..."></textarea>
+                    </div>
+                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                        <button type="submit" 
+                                style="flex: 1;
+                                       background: linear-gradient(135deg, #8b0000, #a00);
+                                       color: white;
+                                       border: none;
+                                       padding: 16px;
+                                       border-radius: 8px;
+                                       font-size: 1.1rem;
+                                       cursor: pointer;
+                                       transition: all 0.3s ease;
+                                       font-weight: bold;"
+                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(139, 0, 0, 0.4)';"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            🧟‍♂️ Cadastrar Empresa
+                        </button>
+                        
+                        <button type="reset" 
+                                style="flex: 1;
+                                       background: linear-gradient(135deg, #5a2d0c, #8b4513);
+                                       color: white;
+                                       border: none;
+                                       padding: 16px;
+                                       border-radius: 8px;
+                                       font-size: 1.1rem;
+                                       cursor: pointer;
+                                       transition: all 0.3s ease;"
+                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(90, 45, 12, 0.4)';"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            🔄 Limpar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div style="background: rgba(90, 45, 12, 0.3); 
+                   padding: 20px; 
+                   border-radius: 10px; 
+                   margin-top: 30px;
+                   border-left: 4px solid #d4af37;">
+            <h3 style="color: #d4af37; margin-bottom: 10px;">💡 Por que se cadastrar?</h3>
+            <p style="color: #c2ffc2; margin: 0;">
+                Ao cadastrar sua empresa na NecroCorp, você terá acesso a <strong>consultorias sobrenaturais</strong>, 
+                <strong>networking com outros zumbis empreendedores</strong> e <strong>descontos especiais em cérebros premium</strong>.
+            </p>
+        </div>
+    </main>
+
+    <footer style="background: #111111; 
+                  color: #cccccc; 
+                  padding: 2rem 1rem; 
+                  text-align: center; 
+                  margin-top: 3rem;
+                  border-top: 3px solid #333333;">
+        <p style="margin-bottom: 10px;">&copy; 2025 NecroCorp. Todos os direitos zumbis reservados.</p>
+        <p>
+            <a href="index.html" 
+               style="color: #d4af37; 
+                      text-decoration: none; 
+                      margin: 0 10px;
+                      transition: color 0.3s ease;"
+               onmouseover="this.style.color='#ff8a8a';"
+               onmouseout="this.style.color='#d4af37';">Início</a> | 
+            <a href="sobre.html" 
+               style="color: #d4af37; 
+                      text-decoration: none; 
+                      margin: 0 10px;
+                      transition: color 0.3s ease;"
+               onmouseover="this.style.color='#ff8a8a';"
+               onmouseout="this.style.color='#d4af37';">Sobre</a>
+        </p>
+    </footer>
 </body>
 </html>
