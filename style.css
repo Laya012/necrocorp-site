@@ -1,85 +1,98 @@
+/* ===== ESTILOS GLOBAIS ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@keyframes bloodDrip {
-    0% { transform: translateY(-100px) scale(0); opacity: 0; }
-    50% { opacity: 0.7; }
-    100% { transform: translateY(100vh) scale(1); opacity: 0; }
-}
 
-@keyframes zombieGlow {
-    0%, 100% { text-shadow: 0 0 10px #8aff8a, 0 0 20px #4dff4d; }
-    50% { text-shadow: 0 0 15px #ff8a8a, 0 0 30px #ff4d4d; }
-}
 body {
-    font-family: 'Courier New', monospace;
-    background: radial-gradient(circle at 20% 30%, #0a1a0a 0%, #000000 70%);
-    color: #a8ffa8;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background: #0a0a0a;
+    color: #ffffff;
 }
 
+/* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #0a230a 0%, #163016 100%);
-    color: #e6ffe6;
-    padding: 2rem 1rem;
-    border-bottom: 4px solid #8b0000;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #8b0000;
+}
+
+header h1 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav {
+    text-align: center;
 }
 
 nav a {
     color: #d4af37;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #d4af37;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #d4af37;
+    background: #d4af37;
     color: #000;
 }
-body.index-body {
-    background: radial-gradient(ellipse at top, #0a1a0a 0%, #000000 100%);
-}
 
-.index-main {
+/* ===== MAIN CONTENT ===== */
+main {
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px;
 }
 
-.index-section {
-    background: rgba(26, 26, 26, 0.9);
-    padding: 30px;
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #1a1a1a;
     border-radius: 10px;
-    margin-bottom: 30px;
-    border: 2px solid #3a5c3a;
+    border: 2px solid #333;
 }
 
-.index-h2 {
-    color: #d4af37;
-    border-bottom: 2px solid #8b0000;
-    padding-bottom: 15px;
+.hero h2 {
+    color: #ff8a8a;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
+
+.hero p {
+    color: #cccccc;
+    font-size: 1.2rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111111;
+    color: #cccccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 3px solid #333;
+}
+
+/* ===== CLASSES PARA DIFERENTES PÁGINAS ===== */
+body.index-body {
+    background: #0a0a0a;
+}
+
+body.produtos-body {
+    background: #0a0a0a;
+}
+
 body.cadastro-body {
-    background-color: #1a0a0a;
+    background: #0a0a0a;
 }
 
-.cadastro-form {
-    background: rgba(26, 13, 13, 0.95);
-    border-radius: 10px;
-    padding: 2rem;
-    border: 2px solid #8b0000;
-}
-
-.cadastro-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #5a2d0c;
-    border-radius: 4px;
-    background: rgba(26, 13, 13, 0.8);
-    color: #e6ffe6;
+body.sobre-body {
+    background: #0a0a0a;
 }
