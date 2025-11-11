@@ -1,11 +1,8 @@
-/* === style.css - TEMA ZUMBI COMPLETO === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Animações */
 @keyframes bloodDrip {
     0% { transform: translateY(-100px) scale(0); opacity: 0; }
     50% { opacity: 0.7; }
@@ -16,8 +13,6 @@
     0%, 100% { text-shadow: 0 0 10px #8aff8a, 0 0 20px #4dff4d; }
     50% { text-shadow: 0 0 15px #ff8a8a, 0 0 30px #ff4d4d; }
 }
-
-/* Estilos Globais */
 body {
     font-family: 'Courier New', monospace;
     background: radial-gradient(circle at 20% 30%, #0a1a0a 0%, #000000 70%);
@@ -46,8 +41,6 @@ nav a:hover {
     background-color: #d4af37;
     color: #000;
 }
-
-/* Estilos Index */
 body.index-body {
     background: radial-gradient(ellipse at top, #0a1a0a 0%, #000000 100%);
 }
@@ -71,8 +64,6 @@ body.index-body {
     border-bottom: 2px solid #8b0000;
     padding-bottom: 15px;
 }
-
-/* Estilos Cadastro */
 body.cadastro-body {
     background-color: #1a0a0a;
 }
