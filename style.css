@@ -1,461 +1,112 @@
-:root {
-    --necro-green: #2d5a27;
-    --necro-dark: #1a1a1a;
-    --necro-blood: #8b0000;
-    --necro-rot: #556b2f;
-    --necro-bone: #f5f5dc;
-    --necro-flesh: #ffdead;
-    --necro-glow: #00ff00;
-    --necro-toxic: #32cd32;
-    
-    --primary-color: var(--necro-green);
-    --primary-dark: #1e3b1a;
-    --primary-light: #3a6b32;
-    --secondary-color: var(--necro-rot);
-    --accent-color: var(--necro-blood);
-    --success-color: var(--necro-toxic);
-    --warning-color: #ff4500;
-    --danger-color: #dc143c;
-    
-    --bg-color: #0a0a0a;
-    --surface-color: #1a1a1a;
-    --text-color: #e8e8e8;
-    --text-light: #b0b0b0;
-    --text-lighter: #808080;
-    --border-color: #333333;
-    --border-light: #2a2a2a;
-    
-    --shadow-sm: 0 1px 3px rgba(0, 255, 0, 0.1);
-    --shadow: 0 2px 6px rgba(0, 255, 0, 0.15);
-    --shadow-md: 0 4px 12px rgba(139, 0, 0, 0.2);
-    --shadow-lg: 0 8px 24px rgba(0, 255, 0, 0.25);
-    
-    --radius-sm: 2px;
-    --radius: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
-    
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 body {
-    font-family: 'Courier New', 'Lucida Console', monospace;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45;
     margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    min-height: 100vh;
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(45, 90, 39, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(139, 0, 0, 0.1) 0%, transparent 20%);
-    background-attachment: fixed;
+    padding: 0 1rem;
+    background-color: #f5f5f5;
+    color: #333;
 }
+
 header {
-    background-color: var(--necro-dark);
-    color: var(--necro-toxic);
-    padding: var(--space-md);
+    background-color: #111;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-md);
-    border-bottom: 2px solid var(--necro-blood);
-    background-image: 
-        linear-gradient(45deg, transparent 95%, var(--necro-green) 95%),
-        linear-gradient(-45deg, transparent 95%, var(--necro-blood) 95%);
-    background-size: 20px 20px;
-}
-
-header h1 {
-    color: var(--necro-toxic);
-    text-shadow: 0 0 10px var(--necro-glow);
-    font-family: 'Impact', 'Haettenschweiler', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: var(--space-sm);
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
-    margin-top: var(--space-sm);
 }
 
 header nav a {
-    color: var(--necro-flesh);
+    color: #ffd;
+    margin-right: 0.5rem;
     text-decoration: none;
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius);
-    transition: all 0.3s ease;
-    font-weight: 600;
-    position: relative;
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    font-size: 0.9rem;
 }
 
 header nav a:hover {
-    background-color: rgba(139, 0, 0, 0.3);
-    border: 1px solid var(--necro-blood);
-    transform: translateY(-2px);
-    text-shadow: 0 0 8px var(--necro-glow);
+    text-decoration: underline;
 }
 
-header nav a::before {
-    content: '☠';
-    margin-right: var(--space-xs);
-    opacity: 0.7;
+h1, h2, h3 {
+    color: #0055aa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0.5rem;
 }
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
-    min-height: calc(100vh - 200px);
-}
+
 section {
-    margin: var(--space-xl) 0;
-    padding: var(--space-lg);
-    background-color: var(--surface-color);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    position: relative;
-    overflow: hidden;
+    margin: 2rem 0;
 }
 
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--necro-green), transparent);
-}
-h1, h2, h3, h4, h5, h6 {
-    color: var(--necro-toxic);
-    font-family: 'Courier New', monospace;
-    margin-bottom: var(--space-sm);
-    line-height: 1.3;
-    font-weight: 700;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
-}
-
-h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: var(--space-lg);
-    border-bottom: 3px double var(--necro-blood);
-    padding-bottom: var(--space-sm);
-}
-
-h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: var(--space-md);
-    border-left: 4px solid var(--necro-green);
-    padding-left: var(--space-sm);
-}
-
-h3 {
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-    margin-bottom: var(--space-sm);
-    color: var(--necro-flesh);
-}
 article {
-    margin-bottom: var(--space-lg);
-    padding: var(--space-lg);
-    background-color: var(--surface-color);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
-article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--necro-green), var(--necro-blood), var(--necro-green));
-}
-
-article:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--necro-toxic);
-}
 figure {
-    margin: var(--space-lg) 0;
+    margin: 1rem 0;
     text-align: center;
-    position: relative;
 }
 
 figure img {
     width: 100%;
     max-width: 800px;
     height: auto;
-    border: 3px double var(--necro-rot);
-    border-radius: var(--radius);
-    transition: all 0.3s ease;
-    filter: sepia(0.3) contrast(1.1);
-    margin: 0 auto;
-}
-
-figure img:hover {
-    transform: scale(1.01);
-    box-shadow: var(--shadow-md);
-    filter: sepia(0.5) contrast(1.2);
+    border: 2px solid #ccc;
 }
 
 figcaption {
     font-style: italic;
     font-size: 0.9em;
-    color: var(--text-light);
-    margin-top: var(--space-xs);
-    border-top: 1px dashed var(--necro-rot);
-    padding-top: var(--space-xs);
 }
+
 a {
-    color: var(--necro-toxic);
+    color: #0066cc;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    position: relative;
 }
 
 a:hover {
-    color: var(--necro-flesh);
-    text-shadow: 0 0 8px var(--necro-glow);
+    color: #004080;
+    text-decoration: underline;
 }
 
-a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--necro-toxic);
-    transition: width 0.3s ease;
-}
-
-a:hover::after {
-    width: 100%;
-}
-ul {
-    margin: var(--space-md) 0;
-    padding-left: var(--space-lg);
-}
-
-li {
-    margin: var(--space-sm) 0;
-    line-height: 1.6;
-}
-button, 
-input[type="submit"],
-input[type="button"],
-.btn {
-    background: linear-gradient(135deg, var(--necro-green), var(--necro-dark));
-    color: var(--necro-flesh);
-    padding: var(--space-sm) var(--space-lg);
-    border: 1px solid var(--necro-rot);
-    border-radius: var(--radius);
+button, input[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-xs);
-    min-height: 44px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
 }
 
-button::before,
-input[type="submit"]::before,
-input[type="button"]::before,
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
+button:hover, input[type="submit"]:hover {
+    background-color: #004999;
+}
+
+table {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
-    transition: left 0.5s ease;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-button:hover, 
-input[type="submit"]:hover,
-input[type="button"]:hover,
-.btn:hover {
-    background: linear-gradient(135deg, var(--necro-blood), var(--necro-dark));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    text-shadow: 0 0 5px var(--necro-glow);
-}
-
-button:hover::before,
-input[type="submit"]:hover::before,
-input[type="button"]:hover::before,
-.btn:hover::before {
-    left: 100%;
-}
-footer {
-    background: linear-gradient(180deg, var(--necro-dark), #000);
-    color: var(--necro-flesh);
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
     text-align: center;
-    padding: var(--space-xl) var(--space-md);
-    margin-top: var(--space-xl);
-    border-top: 3px double var(--necro-blood);
-    position: relative;
 }
 
-footer::before {
-    content: '☠ NECRO CORP ☠';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--bg-color);
-    padding: 0 var(--space-md);
-    color: var(--necro-toxic);
-    font-weight: bold;
-    text-shadow: 0 0 5px var(--necro-glow);
+thead {
+    background-color: #222;
+    color: #fff;
 }
 
-footer p {
-    margin-bottom: var(--space-xs);
-    opacity: 0.9;
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-footer a {
-    color: var(--necro-toxic);
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 }
 
-footer a:hover {
-    color: var(--necro-flesh);
-}
-@keyframes glitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
-}
-
-.glitch-text {
-    animation: glitch 0.5s infinite;
-}
-
-.glitch-text:hover {
-    animation: glitch 0.2s infinite;
-    color: var(--necro-toxic);
-    text-shadow: 2px 2px 0 var(--necro-blood), -2px -2px 0 var(--necro-green);
-}
-@media (max-width: 768px) {
-    body {
-        padding: 0 var(--space-sm);
-    }
-    
-    main {
-        padding: var(--space-md) var(--space-sm);
-    }
-    
-    section {
-        margin: var(--space-lg) 0;
-        padding: var(--space-md);
-    }
-    
-    header nav {
-        flex-direction: column;
-        gap: var(--space-sm);
-    }
-    
-    article {
-        padding: var(--space-md);
-    }
-    
-    header h1 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    :root {
-        --space-md: 1rem;
-        --space-lg: 1.5rem;
-        --space-xl: 2rem;
-    }
-    
-    section {
-        padding: var(--space-sm);
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    header nav a {
-        display: block;
-        margin: var(--space-xs) 0;
-    }
-}
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-button:focus-visible,
-input:focus-visible,
-a:focus-visible {
-    outline: 2px solid var(--necro-toxic);
-    outline-offset: 2px;
-    box-shadow: 0 0 10px var(--necro-glow);
-}
-::selection {
-    background-color: var(--necro-green);
-    color: var(--necro-flesh);
-    text-shadow: 0 0 3px #000;
-}
-
-::-moz-selection {
-    background-color: var(--necro-green);
-    color: var(--necro-flesh);
-    text-shadow: 0 0 3px #000;
-}
-.debug-test {
-    display: none !important;
+img, video, audio {
+    margin: 10px 0;
+    border: 1px solid #ccc;
 }
