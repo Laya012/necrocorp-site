@@ -3,42 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NecroCorp</title>
+    <title>NecroCorp </title>
     <meta name="description" content="NecroCorp - soluções e consultoria">
-        <link rel="stylesheet" href="style.css">
-        <style>
-        body {
-            background-color: #0a0a0a !important;
-            color: #00ff00 !important;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .debug-test {
-            background: #ff0000 !important;
-            color: #ffffff !important;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            display: block !important;
-        }
-    </style>
+    <link rel="alternate" href="cadastro.html">
+    <style>body{font-family:Arial,Helvetica,sans-serif;line-height:1.45;margin:0;padding:0 1rem}header,footer{background:#111;color:#fff;padding:1rem}nav a{color:#ffd; margin-right:.5rem}</style>
 </head>
 <body>
-    <div class="debug-test" id="cssDebug">
-        ⚠ AVISO: CSS EXTERNO NÃO CARREGADO - Verifique o arquivo style.css
-    </div>
-
     <header>
         <h1>NecroCorp</h1>
         <nav aria-label="menu">
-            <a href="index.html">Início</a>
-            <a href="produto.html">Produtos</a>
-            <a href="cadastro.html">Cadastrar Empresa</a>
-            <a href="sobre.html">Sobre</a>
+            <a href="index.html">Início</a> |
+            <a href="produto.html">Produtos</a> |
+            <a href="cadastro.html">Cadastrar Empresa</a> |
+            <a href="sobre.html">Sobre</a> |
             <a href="parceiros.html">Parceiros</a>
         </nav>
     </header>
 
+    <main>
+        <section id="inicio">
+            <h2>Apresentação</h2>
+            <p>Bem-vindo á NecroCorp. Página inicial limpa e compatível com HTML5.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NecroCorp.</p>
+        <p><a href="index.html">Início</a> | <a href="parceiros.html">Parceiros</a></p>
+    </footer>
+</body>
+</html>
++
     <main>
         <section id="inicio">
             <h2>Apresentação</h2>
@@ -108,17 +103,7 @@
 
     <footer>
         <p>&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
-        <p><a href="index.html">Início</a> | <a href="parceiros.html">Parceiros</a></p>
+        <p><a href="index.html">Currículo</a> | <a href="parceiros.html">Parceiros</a></p>
     </footer>
-    <script>
-        setTimeout(() => {
-            const debugElement = document.getElementById('cssDebug');
-            const bodyStyles = window.getComputedStyle(document.body);
-                        if (bodyStyles.backgroundColor === 'rgb(10, 10, 10)' || 
-                bodyStyles.color === 'rgb(232, 232, 232)') {
-                debugElement.style.display = 'none';
-            }
-        }, 100);
-    </script>
 </body>
 </html>
