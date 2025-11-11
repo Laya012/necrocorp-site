@@ -5,72 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NecroCorp</title>
     <meta name="description" content="NecroCorp - soluções e consultoria">
+    <link rel="alternate" href="cadastro.html">
     <style>
+        /* Reset e configurações básicas */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.45;
-            margin: 0;
-            padding: 0 1rem;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
         }
-        header, footer {
+        
+        /* Header */
+        header {
             background: #111;
             color: #fff;
-            padding: 1rem;
+            padding: 1rem 0;
         }
+        
+        header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        nav {
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+        
         nav a {
             color: #ffd;
-            margin-right: .5rem;
             text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.3rem 0.5rem;
+            transition: color 0.3s;
         }
+        
         nav a:hover {
+            color: #fff;
             text-decoration: underline;
         }
+        
+        /* Main content */
         main {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 2rem 1rem;
         }
+        
         section {
+            background: white;
             margin: 2rem 0;
-            padding: 1rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        
+        h2 {
+            color: #111;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #111;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #333;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        /* Articles dentro das seções */
         article {
             margin: 1.5rem 0;
             padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border-left: 3px solid #111;
+            background: #f9f9f9;
         }
+        
+        /* Imagens */
         img {
             max-width: 100%;
             height: auto;
-        }
-        figure {
+            display: block;
             margin: 1rem 0;
+            border-radius: 4px;
         }
+        
+        figure {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
         figcaption {
             font-style: italic;
             color: #666;
             margin-top: 0.5rem;
+            font-size: 0.9rem;
         }
-        ul {
-            padding-left: 1.5rem;
-        }
+        
+        /* Links */
         a {
             color: #0066cc;
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
+        }
+        
+        /* Listas */
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer a {
+            color: #ffd;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+            
+            section {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.3rem 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>NecroCorp</h1>
-        <nav aria-label="menu principal">
-            <a href="index.html">Início</a> |
-            <a href="produto.html">Produtos</a> |
-            <a href="cadastro.html">Cadastrar Empresa</a> |
-            <a href="sobre.html">Sobre</a> |
+        <nav aria-label="menu">
+            <a href="index.html">Início</a>
+            <a href="produto.html">Produtos</a>
+            <a href="cadastro.html">Cadastrar Empresa</a>
+            <a href="sobre.html">Sobre</a>
             <a href="parceiros.html">Parceiros</a>
         </nav>
     </header>
@@ -82,18 +182,16 @@
                 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Escritório da NecroCorp">
                 <figcaption>Nosso centro de operações - inovação e estratégia.</figcaption>
             </figure>
-            <p>Bem-vindo à NecroCorp. Página inicial limpa e compatível com HTML5.</p>
             <p>A NecroCorp oferece soluções completas para empresas que desejam superar crises, ampliar participação de mercado e fortalecer sua marca. Unimos análise estratégica, tecnologia e criatividade para entregar resultados mensuráveis.</p>
         </section>
 
         <section id="servicos">
             <h2>Serviços</h2>
-            
             <article>
                 <h3>Consultoria Estratégica</h3>
                 <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Consultoria">
                 <p>Análise profunda do negócio, planejamento tático e execução orientada a resultados.</p>
-                <p><a href="curriculo.html">Saiba mais sobre nossa equipe</a></p>
+                <p><a href="Curriculo.html">Saiba mais sobre nossa equipe</a></p>
             </article>
 
             <article>
@@ -112,7 +210,6 @@
 
         <section id="portfolio">
             <h2>Portfólio</h2>
-            
             <article>
                 <h3>Projeto Sepulcral</h3>
                 <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Projeto Sepulcral">
@@ -147,10 +244,7 @@
 
     <footer>
         <p>&copy; 2025 NecroCorp. Todos os direitos reservados.</p>
-        <p>
-            <a href="index.html">Início</a> | 
-            <a href="parceiros.html">Parceiros</a>
-        </p>
+        <p><a href="index.html">Início</a> | <a href="parceiros.html">Parceiros</a></p>
     </footer>
 </body>
 </html>
