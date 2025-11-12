@@ -4,28 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NecroCorp - Página Inicial</title>
+    
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS Incorporado -->
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        /* Layout principal */
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "main aside"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            grid-area: header;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-bottom: 2px solid #8b0000;
+        }
+        
+        nav {
+            grid-area: nav;
+            background-color: #2a2a2a;
+        }
+        
+        main {
+            grid-area: main;
+            padding: 2rem;
+            background-color: #1e1e1e;
+            border-right: 1px solid #333;
+        }
+        
+        aside {
+            grid-area: aside;
+            padding: 2rem;
+            background-color: #1e1e1e;
+        }
+        
+        footer {
+            grid-area: footer;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            text-align: center;
+            border-top: 2px solid #8b0000;
+        }
+        
+        /* Menu dinâmico */
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            position: relative;
+        }
+        
+        .menu a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .menu a:hover {
+            background-color: #8b0000;
+            color: #fff;
+        }
+        
+        /* Submenu */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2a2a2a;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .menu li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .submenu a {
+            padding: 0.8rem 1.5rem;
+            border-bottom: 1px solid #333;
+        }
+        
+        .submenu a:last-child {
+            border-bottom: none;
+        }
+        
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a1a1a"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%238b0000" stroke-width="2"/></svg>');
+            background-size: cover;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Conteúdo principal */
+        .content {
+            margin-bottom: 2rem;
+        }
+        
+        .content h3 {
+            color: #8b0000;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: #2a2a2a;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            border-left: 3px solid #8b0000;
+        }
+        
+        .sidebar-widget h3 {
+            color: #8b0000;
+            margin-top: 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+            
+            main {
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+            
+            .menu {
+                flex-direction: column;
+            }
+            
+            .submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                box-shadow: none;
+            }
+            
+            .menu li:hover .submenu {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body class="index-body">
-    <header>
-        <h1>NecroCorp</h1>
+    <div class="container">
+        <header>
+            <h1 style="color: #8b0000; text-align: center; font-size: 2.5rem; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">NecroCorp</h1>
+        </header>
+        
         <nav>
-            <a href="index.html">Início</a>
-            <a href="produto.html">Produtos</a>
-            <a href="cadastro.html">Cadastro</a>
-            <a href="sobre.html">Sobre</a>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li>
+                    <a href="produto.html">Produtos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Serviços de Reanimação</a></li>
+                        <li><a href="#">Manutenção de Zumbis</a></li>
+                        <li><a href="#">Consultoria Apocalíptica</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                    <ul class="submenu">
+                        <li><a href="#">Nossa História</a></li>
+                        <li><a href="#">Equipe</a></li>
+                        <li><a href="#">Parceiros</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h2>Bem-vindo à NecroCorp</h2>
-            <p>Soluções zumbis para empresas que nunca morrem!</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 NecroCorp - Todos os direitos reservados</p>
-    </footer>
+        
+        <main>
+            <section class="hero">
+                <h2>Bem-vindo à NecroCorp</h2>
+                <p>Soluções zumbis para empresas que nunca morrem!</p>
+            </section>
+            
+            <section class="content">
+                <h3>Nossos Serviços</h3>
+                <p>A NecroCorp é líder no mercado de soluções pós-vida para empresas. Oferecemos uma gama completa de serviços para garantir que seu negócio continue operando, mesmo após o apocalipse zumbi.</p>
+                
+                <h3 style="margin-top: 2rem;">Por que escolher a NecroCorp?</h3>
+                <ul>
+                    <li>Mais de 50 anos de experiência em reanimação corporativa</li>
+                    <li>Equipe altamente qualificada em necromancia empresarial</li>
+                    <li>Tecnologia de ponta em controle de hordas</li>
+                    <li>Suporte 24/7, mesmo durante invasões</li>
+                </ul>
+            </section>
+        </main>
+        
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Novidades</h3>
+                <p>Lançamos nosso novo serviço de "Zumbis como Serviço" (ZaaS). Contrate agora e tenha sua própria horda personalizada!</p>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Depoimentos</h3>
+                <p>"A NecroCorp salvou meu negócio durante a última invasão. Recomendo!" - Dr. A. Frankenstein</p>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Eventos</h3>
+                <p>Participe do nosso seminário "Sobrevivência Corporativa no Apocalipse" no próximo mês.</p>
+            </div>
+        </aside>
+        
+        <footer>
+            <p style="margin: 0; color: #aaa;">&copy; 2025 NecroCorp - Todos os direitos reservados</p>
+        </footer>
+    </div>
 </body>
 </html>
